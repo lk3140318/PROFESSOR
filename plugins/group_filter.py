@@ -40,7 +40,7 @@ async def fil_mod(client, message):
           FILTER_MODE[str(message.chat.id)] = "True"
           await m.edit("**ᴀᴜᴛᴏꜰɪʟᴛᴇʀ ᴇɴᴀʙʟᴇᴅ**")
       
-      elif args in mode_of:
+      elif args in mode_on:
           FILTER_MODE[str(message.chat.id)] = "True"
           await m.edit("**ᴀᴜᴛᴏꜰɪʟᴛᴇʀ ᴅɪꜱᴀʙʟᴇᴅ**")
       else:
@@ -63,7 +63,7 @@ async def g_fil_mod(client, message):
           G_MODE[str(message.chat.id)] = "True"
           await m.edit("**ɢʟᴏʙᴀʟ ꜰɪʟᴛᴇʀ ᴇɴᴀʙʟᴇᴅ**")
       
-      elif args in mode_of:
+      elif args in mode_on:
           G_MODE[str(message.chat.id)] = "True"
           await m.edit("**ɢʟᴏʙᴀʟ ꜰɪʟᴛᴇʀ ᴅɪꜱᴀʙʟᴇᴅ**")
       else:
@@ -216,7 +216,7 @@ async def auto_filter(client, msg, spoll=False):
             btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}'),
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'{pre}#{req}#{file.file_id}')] for file in files ] 
 
-    btn.insert(0, [InlineKeyboardButton("🔗 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🔗", "https://t.me/FilmiChannelMix")])
+    btn.insert(0, [InlineKeyboardButton("🔗 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🔗", "https://t.me/+ULb1gZu3Mvk1OWZl")])
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         temp.GP_BUTTONS[key] = search
